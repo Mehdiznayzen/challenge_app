@@ -6,6 +6,8 @@ Welcome to My React Native App! This mobile application allows users to search f
 
 🔍 Search for products by name
 
+📈 View product details
+
 🎨 Modern UI with smooth animations
 
 📦 Fetch products dynamically
