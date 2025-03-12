@@ -1,15 +1,12 @@
-import useCategories from "@/hooks/useFetchCategories";
 import useProducts from "@/hooks/useFetchProducts";
 import { FlatList, Text, View } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient'
-import CategoryCard from "@/components/CategoryCard";
 import { useGlobalContext } from "@/lib/global-provider";
 import Loader from "@/components/Loader";
 import ProductCard from "@/components/ProductCard";
 
 const HomePage = () => {
     const { error, loading, products } = useProducts()
-    const { error: errorCategory, categories, loading: loadingCategories } = useCategories()
     const { isAllProducts } = useGlobalContext()
 
     const getSalutation = () => {
@@ -41,28 +38,6 @@ const HomePage = () => {
                     <Text className="font-bold">My Friend 🤩👋</Text>
                 </Text>
             </LinearGradient>
-
-            {/* Fetch the categories */}
-            <View className="p-4">
-                {
-                    loadingCategories ? (
-                        <View className="w-[100%] flex items-center justify-center">
-                            <Loader />
-                        </View>
-                    ) : errorCategory ? (
-                            <Text>Error: {errorCategory}</Text>
-                    ) : (
-                        <FlatList
-                            data={categories}
-                            renderItem={CategoryCard}
-                            keyExtractor={(index) => index.toString()}
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            className="mt-[10px]"
-                        />
-                    )
-                }
-            </View>
             
             {/* Fetch all products */}
             {

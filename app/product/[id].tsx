@@ -1,5 +1,5 @@
 import Loader from '@/components/Loader';
-import useFetchProductsByCategory from '@/hooks/useProductsByCategory';
+import useFetchProductsByCategory from '@/hooks/useProductsById';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { ArrowLeft } from '@/constants/icons';
