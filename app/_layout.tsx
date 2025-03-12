@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
 import "./globals.css";
+import GlobalProvider from "@/lib/global-provider";
 
 export default function AppLayout() {
     const [fontsLoaded] = useFonts({
@@ -21,21 +22,23 @@ export default function AppLayout() {
     }
 
     return (
-        <Stack 
-            screenOptions={{ headerShown: false }} 
-        >
-            <Stack.Screen
-                name="(tabs)"
-                options={{
-                    headerShown: false,
-                }}
-            />
-            <Stack.Screen
-                name="product/[id]"
-                options={{
-                    headerShown: false,
-                }}
-            />
-        </Stack>
+        <GlobalProvider>
+            <Stack 
+                screenOptions={{ headerShown: false }}
+            >
+                <Stack.Screen
+                    name="(tabs)"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="product/[id]"
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+            </Stack>
+        </GlobalProvider>
     );
 }

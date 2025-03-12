@@ -54,27 +54,27 @@ export default function TabsLayout() {
                 },
             }}
         >
-        <Tabs.Screen
-            name="index"
-            options={{
-                title: "Home",
-                headerShown: false,
-                tabBarIcon: ({ focused }) => (
-                    <TabIcon focused={focused} icon={Home} title="Home" />
-                ),
-            }}
-        />
+            <Tabs.Screen
+                name="index"
+                options={{
+                    title: "Home",
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <TabIcon focused={focused} icon={Home} title="Home" />
+                    ),
+                }}
+            />
 
-        <Tabs.Screen
-            name="search"
-            options={{
-                title: "Search",
-                headerShown: false,
-                tabBarIcon: ({ focused }) => (
-                    <TabIcon focused={focused} icon={Search} title="Search" />
-                ),
-            }}
-        />
+            <Tabs.Screen
+                name="search"
+                options={{
+                    title: "Search",
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) => (
+                        <TabIcon focused={focused} icon={Search} title="Search" />
+                    ),
+                }}
+            />
         </Tabs>
     );
 }
