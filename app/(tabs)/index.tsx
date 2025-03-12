@@ -18,26 +18,16 @@ const HomePage = () => {
         <View
             className="flex-1"
         >
-            <LinearGradient
-                colors={['#3b82f6', '#60a5fa', '#93c5fd']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{
-                    height: 100,
-                    borderBottomLeftRadius: 20,
-                    borderBottomRightRadius: 20,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                }}
+            <View
+                className="flex flex-row p-4 items-center justify-center h-[63px]"
             >
-                <Text className="text-white text-2xl">
+                <Text className="text-[25px] text-black">
                     {getSalutation()},{" "}
-                    <Text className="font-bold">My Friend 🤩👋</Text>
+                    <Text className="font-bold">Friend👋🤩</Text>
                 </Text>
-            </LinearGradient>
+            </View>
             
-            <View className="p-4">
+            <View className="p-4 mt-[20px]">
                 {
                     loading ? (
                         <View className="w-[100%] flex items-center justify-center">

@@ -1,3 +1,4 @@
+
 import { Tabs } from "expo-router";
 import { ImageBackground, Image, Text, View } from "react-native";
 
@@ -46,7 +47,7 @@ export default function TabsLayout() {
                     borderRadius: 50,
                     marginHorizontal: 20,
                     marginBottom: 36,
-                    height: 52,
+                    height: 54,
                     position: "absolute",
                     overflow: "hidden",
                     borderWidth: 1,

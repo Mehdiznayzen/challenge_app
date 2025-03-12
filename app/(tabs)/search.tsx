@@ -35,25 +35,6 @@ const SearchPage = () => {
 
     return (
         <View className="flex-1">
-            <LinearGradient
-                colors={['#3b82f6', '#60a5fa', '#93c5fd']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{
-                    height: 100,
-                    borderBottomLeftRadius: 20,
-                    borderBottomRightRadius: 20,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                }}
-            >
-                <Text className="text-white text-2xl">
-                    {getSalutation()},{" "}
-                    <Text className="font-bold">My Friend 🤩👋</Text>
-                </Text>
-            </LinearGradient>
-
             {/* Search Input */}
             <View className="flex-row items-center bg-gray-200 mx-4 mt-6 p-3 rounded-lg">
                 <MagnifyingGlassIcon size={24} color="#555" />

@@ -36,6 +36,12 @@ export default function AppLayout() {
                     headerShown: false,
                 }}
             />
+            <Stack.Screen
+                name="+not-found"
+                options={{
+                    headerShown: false,
+                }}
+            />
         </Stack>
     );
 }
