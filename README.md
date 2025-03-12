@@ -3,23 +3,11 @@
 Welcome to My React Native App! This mobile application allows users to search for products by name and provides a seamless user experience.
 
 🚀 Features
-
-🔍 Search for products by name
-
-📈 View product details
-
-🎨 Modern UI with smooth animations
-
-📦 Fetch products dynamically
-
-🔄 Real-time updates
-
-🌙 Dark mode support (if applicable)
-
-📥 APK Download
-
-To test the application, download the APK from the following link:
-📥 Download APK (Replace with actual link once uploaded)
+- 🔍 Search for products by name  
+- 📈 View product details  
+- 🎨 Modern UI with smooth animations  
+- 📦 Fetch products dynamically  
+- 🔄 Real-time updates
 
 🛠 Installation & Setup
 
@@ -37,6 +25,11 @@ Clone the Repository
 
 git clone https://github.com/Mehdiznayzen/challenge_app.git
 cd challenge_app
+
+## 📥 APK Download
+
+To test the application, download the APK from the following link:  
+📥 [Download APK](Replace_with_actual_link_once_uploaded)  
 
 Install Dependencies
 
