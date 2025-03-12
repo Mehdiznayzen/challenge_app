@@ -1,13 +1,11 @@
 import useProducts from "@/hooks/useFetchProducts";
 import { FlatList, Text, View } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient'
-import { useGlobalContext } from "@/lib/global-provider";
 import Loader from "@/components/Loader";
 import ProductCard from "@/components/ProductCard";
 
 const HomePage = () => {
     const { error, loading, products } = useProducts()
-    const { isAllProducts } = useGlobalContext()
 
     const getSalutation = () => {
         const hour = new Date().getHours();
@@ -39,35 +37,28 @@ const HomePage = () => {
                 </Text>
             </LinearGradient>
             
-            {/* Fetch all products */}
-            {
-                isAllProducts ? (
-                    <View className="p-4">
-                        {
-                            loading ? (
-                                <View className="w-[100%] flex items-center justify-center">
-                                    <Loader />
-                                </View>
-                            ) : error ? (
-                                <Text>Error: {error}</Text>
-                            ) : (
-                                <FlatList
-                                    data={products}
-                                    renderItem={({ item }) => <ProductCard product={item} />}
-                                    keyExtractor={(item) => item.id.toString()}
-                                    contentContainerStyle={{
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        paddingBottom: 20,
-                                    }}
-                                />
-                            )
-                        }
-                    </View>
-                ) : (
-                    <Text>no all products</Text>
-                )
-            }
+            <View className="p-4">
+                {
+                    loading ? (
+                        <View className="w-[100%] flex items-center justify-center">
+                            <Loader />
+                        </View>
+                    ) : error ? (
+                        <Text>Error: {error}</Text>
+                    ) : (
+                        <FlatList
+                            data={products}
+                            renderItem={({ item }) => <ProductCard product={item} />}
+                            keyExtractor={(item) => item.id.toString()}
+                            contentContainerStyle={{
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                paddingBottom: 20,
+                            }}
+                        />
+                    )
+                }
+            </View>
         </View>
     );
 };
