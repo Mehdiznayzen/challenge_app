@@ -21,37 +21,12 @@ const Loader = () => {
     return (
         <View className={`flex flex-col gap-[3px] items-center justify-center h-[100%]`}>
             <Animated.View
-                style={[
-                    styles.loader,
-                    { transform: [{ rotate }] },
-                ]}
+                className="w-10 h-10 rounded-full border-4 border-violet-500 border-t-transparent"
+                style={{ transform: [{ rotate }] }}
             />
-            <Text style={styles.text}>Loading...</Text>
+            <Text className="text-xs font-bold text-violet-500 mt-2">Loading...</Text>
         </View>
     );
-};
-
-const styles = {
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f0f0f0',
-    },
-    loader: {
-        width: 40,
-        height: 40,
-        borderRadius: 40,
-        borderWidth: 4,
-        borderColor: '#8d71ff',
-        borderTopColor: 'transparent',
-        position: 'relative',
-    },
-    text: {
-        fontSize: 10,
-        fontWeight: 'bold',
-        color: '#8d71ff',
-    },
 };
 
 export default Loader;

@@ -29,7 +29,7 @@ cd challenge_app
 ## 📥 APK Download
 
 To test the application, download the APK from the following link:  
-📥 [Download APK](Replace_with_actual_link_once_uploaded)  
+📥 https://expo.dev/accounts/mehdiznayzen/projects/challenge-app/builds/7f351ebb-691e-42e9-8f99-f7ff875dfac0  
 
 Install Dependencies
 
